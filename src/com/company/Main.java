@@ -6,12 +6,31 @@ import com.company.paquete2.Animal;
 
 public class Main {
 
+    public static int numerador = 10;
+    public static Integer denominador = 0;
+    public static float divison;
+
     public static void main(String[] args) {
 
-        Person person= new Person("Santiago", 33, "102045455");
+        System.out.println("ANTES DE HACER LA DIVISIÓN");
+        try {
+            divison = numerador / denominador;
+        } catch (NullPointerException ex){
+            System.out.println(ex.getMessage());
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        } finally {
+            System.out.println("Finally");
+        }
+
+
+        System.out.println("DESPUÉS DE HACER LA DIVISIÓN");
+
+
+        /*Person person= new Person("Santiago", 33, "102045455");
         System.out.println( "Name: " + person.getName());
         System.out.println( "Age: "+ person.getAge());
-        System.out.println( "Id: " +  person.getId());
+        System.out.println( "Id: " +  person.getId());*/
 
         /*CuentaBancaria cuentaBancaria = new CuentaBancaria();
         cuentaBancaria.setNombre("Rosa");
